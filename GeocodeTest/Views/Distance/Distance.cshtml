@@ -1,0 +1,36 @@
+﻿@model List<double>
+
+<div class="container">
+    
+        @if (Model.Count == 0)
+        {
+            <p>This location is not within the borders of the state of Kansas</p>
+        }
+        else
+        {
+            <table class="table table-bordered">
+                <tr>
+                    <th colspan="2" class="text-center">
+                        Distance to Kansas Borders
+                    </th>
+                </tr>
+                <tr>
+                    <td>North:</td>
+                    <td>@Model[0] miles</td>
+                </tr>
+                <tr>
+                    <td>South:</td>
+                    <td>@Model[1] miles</td>
+                </tr>
+                <tr>
+                    <td>East:</td>
+                    <td>@Model[2] miles</td>
+                </tr>
+                <tr>
+                    <td>West:</td>
+                    <td>@Model[3] miles</td>
+                </tr>
+            </table>
+        }
+    
+</div>

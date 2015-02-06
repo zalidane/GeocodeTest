@@ -1,0 +1,36 @@
+﻿@model String
+
+@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string message = "";
+    
+    if (Model == null)
+    {
+        message = "Address not found.";
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <hgroup>
+        <h1>Error.</h1>
+    </hgroup>
+    <p>
+        @if (Model==null)
+        {
+            <span>@message</span>
+        }
+        else
+        {
+            <span>@Model.ToString()</span>
+        }
+    </p>
+</body>
+</html>
